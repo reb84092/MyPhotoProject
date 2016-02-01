@@ -12,10 +12,10 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.zeroBlue();
-    beach.explore();
+    Picture cancercw = new Picture("cancercw.jpg");
+    cancercw.explore();
+    cancercw.zeroBlue();
+    cancercw.explore();
   }
   
   /** Method to test mirrorVertical */
@@ -27,6 +27,21 @@ public class PictureTester
     caterpillar.explore();
   }
   
+  public static void testMirrorVerticalRightToLeft()
+  {
+	  Picture caterpillar = new Picture("caterpillar.jpg");
+	  caterpillar.explore();
+	  caterpillar.mirrorVerticalRightToLeft();
+	  
+  }
+  
+  public static void testRandomColor()
+  {
+	  Picture randomCat = new Picture("caterpillar.jpg");
+	  randomCat.explore();
+	  randomCat.randomColor();
+	  randomCat.explore();
+  }
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -36,20 +51,29 @@ public class PictureTester
     temple.explore();
   }
   
-  /** Method to test the collage method */
-  public static void testCollage()
-  {
-    Picture canvas = new Picture("640x480.jpg");
-    canvas.createCollage();
-    canvas.explore();
-  }
+
   
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("cancerlv.jpg");
     swan.edgeDetection(10);
     swan.explore();
+  }
+  
+  public static void testEdgeDetection2()
+  {
+	  Picture cancercw = new Picture("cancercw.jpg");
+	  cancercw.edgeDetection(10);
+	  cancercw.explore();
+	  
+  }
+  public static void testCollage()
+  {
+	  Picture cancerlv = new Picture ("cancerlv.jpg");
+	  cancerlv.edgeDetection(10);
+	  cancerlv.explore();
+	  
   }
   
   /** Main method for testing.  Every class can have a main
@@ -66,15 +90,17 @@ public class PictureTester
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
+    testRandomColor();
     testMirrorVertical();
+    testMirrorVerticalRightToLeft();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+    testEdgeDetection();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);

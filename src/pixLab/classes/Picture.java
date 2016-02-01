@@ -114,7 +114,7 @@ public class Picture extends SimplePicture
       {
         leftPixel = pixels[row][col];
         rightPixel = pixels[row][width - 1 - col];
-        rightPixel.setColor(leftPixel.getColor());
+        rightPixel.setColor(rightPixel.getColor());
       }
     } 
   }
@@ -125,22 +125,45 @@ public class Picture extends SimplePicture
     int mirrorPoint = 276;
     Pixel leftPixel = null;
     Pixel rightPixel = null;
-    int count = 0;
     Pixel[][] pixels = this.getPixels2D();
+    int width = pixels[0].length;
     
     // loop through the rows
     for (int row = 27; row < 97; row++)
     {
       // loop from 13 to just before the mirror point
-      for (int col = 13; col < mirrorPoint; col++)
+      for (int col = 0; col < width / 2; col++)
       {
         
         leftPixel = pixels[row][col];      
-        rightPixel = pixels[row]                       
-                         [mirrorPoint - col + mirrorPoint];
+        rightPixel = pixels[row][width - 1 - col];                       
         rightPixel.setColor(leftPixel.getColor());
       }
     }
+  }
+  
+  public void randomColor()
+  {
+	  Pixel [][] pixels = this.getPixels2D();
+	  for(Pixel[] row : pixels)
+	  {
+		  
+	  }
+  }
+  public void mirrorVerticalRightToLeft()
+  {
+	Pixel[][] pixels = this.getPixels2D();
+	Pixel leftPixel = null;
+	Pixel rightPixel = null;
+	int pictureWidth = pixels[0].length;
+	for(int row = 0; row < pixels.length; row++)
+	{
+		for(int col = pixels[0].length - 1; col > pictureWidth / 2; col--)
+		{
+			rightPixel= pixels[row][col];
+			leftPixel = pixels[row][(pictureWidth/2) - (col-pictureWidth/2)];
+		}
+	}
   }
   
   /** copy from the passed fromPic to the
@@ -224,7 +247,7 @@ public class Picture extends SimplePicture
    */
   public static void main(String[] args) 
   {
-    Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("cancerlv.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();

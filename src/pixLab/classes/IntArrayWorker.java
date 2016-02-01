@@ -63,6 +63,11 @@ public class IntArrayWorker
     }
   }
   
+  public void getCount()
+  {
+	  
+  }
+  
   /**
    * print the values in the array in rows and columns
    */
@@ -79,6 +84,17 @@ public class IntArrayWorker
     System.out.println();
   }
   
+  public int getColTotal(int colNumber)
+  {
+	  int colTotal = 0;
+	  for (int row = 0; row < matrix.length; row++)
+	  {
+			  colTotal = colTotal + matrix[row] [colNumber];
+		  
+	  }
+	  return colTotal;
+  }
+				 
   
   /** 
    * fill the array with a pattern
