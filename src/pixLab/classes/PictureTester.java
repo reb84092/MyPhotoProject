@@ -12,7 +12,7 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture cancercw = new Picture("cancercw.jpg");
+    Picture cancercw = new Picture("PersonalIntrocw.jpg");
     cancercw.explore();
     cancercw.zeroBlue();
     cancercw.explore();
@@ -56,21 +56,21 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("cancerlv.jpg");
+    Picture swan = new Picture("PersonalIntrocw.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
   
   public static void testEdgeDetection2()
   {
-	  Picture cancercw = new Picture("cancercw.jpg");
+	  Picture cancercw = new Picture("PersonalIntrolv.jpg");
 	  cancercw.edgeDetection(10);
 	  cancercw.explore();
 	  
   }
   public static void testCollage()
   {
-	  Picture cancerlv = new Picture ("cancerlv.jpg");
+	  Picture cancerlv = new Picture ("PersonalIntrocw.jpg");
 	  cancerlv.edgeDetection(10);
 	  cancerlv.explore();
 	  

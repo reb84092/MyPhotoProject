@@ -12,6 +12,21 @@ public class IntArrayWorker
     matrix = theMatrix;
   }
   
+  public int getCount(int numberToFind)
+  {
+	  int numberFound = 0;
+	  for (int [] rowArray : matrix)
+	  {
+		  for (int item : rowArray)
+		  {
+			  if (numberToFind == item)
+			  {
+				  numberFound++;
+			  }
+		  }
+	  }
+	  return numberFound;
+  }
   /**
    * Method to return the total 
    * @return the total of the values in the array
@@ -29,6 +44,7 @@ public class IntArrayWorker
     return total;
   }
   
+ 
   /**
    * Method to return the total using a nested for-each loop
    * @return the total of the values in the array
@@ -63,10 +79,6 @@ public class IntArrayWorker
     }
   }
   
-  public void getCount()
-  {
-	  
-  }
   
   /**
    * print the values in the array in rows and columns
@@ -93,6 +105,24 @@ public class IntArrayWorker
 		  
 	  }
 	  return colTotal;
+  }
+  
+  public int getLargest ()
+  {
+	  int largest = Integer.MIN_VALUE;
+	  
+	  for (int [] rowArray : matrix)
+	  {
+		  for (int item : rowArray)
+		  {
+			  if (largest < item)
+			  {
+				  largest = item;
+			  }
+		  }
+	  }
+	  
+	  return largest;
   }
 				 
   
