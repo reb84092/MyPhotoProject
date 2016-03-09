@@ -10,18 +10,18 @@ package pixLab.classes;
 public class PictureTester
 {
   /** Method to test zeroBlue */
-  public static void testZeroBlue()
+  public static void testZeroRed()
   {
-    Picture cancercw = new Picture("PersonalIntrocw.jpg");
+    Picture cancercw = new Picture("cancerlv.jpg");
     cancercw.explore();
-    cancercw.zeroBlue();
+    cancercw.zeroRed();
     cancercw.explore();
   }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("cancerlv.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
@@ -29,7 +29,7 @@ public class PictureTester
   
   public static void testMirrorVerticalRightToLeft()
   {
-	  Picture caterpillar = new Picture("caterpillar.jpg");
+	  Picture caterpillar = new Picture("cancerlv.jpg");
 	  caterpillar.explore();
 	  caterpillar.mirrorVerticalRightToLeft();
 	  
@@ -37,7 +37,7 @@ public class PictureTester
   
   public static void testRandomColor()
   {
-	  Picture randomCat = new Picture("caterpillar.jpg");
+	  Picture randomCat = new Picture("cancerlv.jpg");
 	  randomCat.explore();
 	  randomCat.randomColor();
 	  randomCat.explore();
@@ -45,32 +45,36 @@ public class PictureTester
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
-    Picture temple = new Picture("temple.jpg");
+    Picture temple = new Picture("cancerlv.jpg");
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
   }
   
-
+  public static void testMirrorArms()
+  {
+	  Picture snowman = new Picture("snowman.jpg");
+	  snowman.explore();
+  }
   
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("PersonalIntrocw.jpg");
+    Picture swan = new Picture("cancerlv.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
   
   public static void testEdgeDetection2()
   {
-	  Picture cancercw = new Picture("PersonalIntrolv.jpg");
+	  Picture cancercw = new Picture("cancerlv.jpg");
 	  cancercw.edgeDetection(10);
 	  cancercw.explore();
 	  
   }
   public static void testCollage()
   {
-	  Picture cancerlv = new Picture ("PersonalIntrocw.jpg");
+	  Picture cancerlv = new Picture ("cancerlv.jpg");
 	  cancerlv.edgeDetection(10);
 	  cancerlv.explore();
 	  
@@ -83,24 +87,24 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroRed();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testRandomColor();
-    testMirrorVertical();
-    testMirrorVerticalRightToLeft();
+    //testRandomColor();
+    //testMirrorVertical();
+    //testMirrorVerticalRightToLeft();
     //testMirrorTemple();
-    //testMirrorArms();
+    testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    testCollage();
+    //testCollage();
     //testCopy();
-    testEdgeDetection();
-    testEdgeDetection2();
+    //testEdgeDetection();
+    //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);

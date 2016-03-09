@@ -12,7 +12,7 @@ import java.awt.Color;
  * 
  * @author Barb Ericson ericson@cc.gatech.edu
  */
-public class Pixel
+public class topPixel
 {
   
   ////////////////////////// fields ///////////////////////////////////
@@ -35,7 +35,7 @@ public class Pixel
    * @param x the x location of the pixel in the picture
    * @param y the y location of the pixel in the picture
    */
-  public Pixel(DigitalPicture picture, int x, int y)
+  public topPixel(DigitalPicture picture, int x, int y)
   {
     // set the picture
     this.picture = picture;

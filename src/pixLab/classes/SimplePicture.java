@@ -152,8 +152,8 @@ public class SimplePicture implements DigitalPicture
   */
  public void copyPicture(SimplePicture sourcePicture)
  {
-   Pixel sourcePixel = null;
-   Pixel targetPixel = null;
+   topPixel sourcePixel = null;
+   topPixel targetPixel = null;
    
    // loop through the columns
    for (int sourceX = 0, targetX = 0; 
@@ -318,10 +318,10 @@ public class SimplePicture implements DigitalPicture
   * @param y  the y location of the pixel in the picture
   * @return a Pixel object for this location
   */
- public Pixel getPixel(int x, int y)
+ public topPixel getPixel(int x, int y)
  {
    // create the pixel object for this picture and the given x and y location
-   Pixel pixel = new Pixel(this,x,y);
+   topPixel pixel = new topPixel(this,x,y);
    return pixel;
  }
  
@@ -330,16 +330,16 @@ public class SimplePicture implements DigitalPicture
   * @return a one-dimensional array of Pixel objects starting with y=0
   * to y=height-1 and x=0 to x=width-1.
   */
- public Pixel[] getPixels()
+ public topPixel[] getPixels()
  {
    int width = getWidth();
    int height = getHeight();
-   Pixel[] pixelArray = new Pixel[width * height];
+   topPixel[] pixelArray = new topPixel[width * height];
    
    // loop through height rows from top to bottom
    for (int row = 0; row < height; row++) 
      for (int col = 0; col < width; col++) 
-       pixelArray[row * width + col] = new Pixel(this,col,row);
+       pixelArray[row * width + col] = new topPixel(this,col,row);
     
    return pixelArray;
  }
@@ -348,16 +348,16 @@ public class SimplePicture implements DigitalPicture
   * Method to get a two-dimensional array of Pixels for this simple picture
   * @return a two-dimensional array of Pixel objects in row-major order.
   */
- public Pixel[][] getPixels2D()
+ public topPixel[][] getPixels2D()
  {
    int width = getWidth();
    int height = getHeight();
-   Pixel[][] pixelArray = new Pixel[height][width];
+   topPixel[][] pixelArray = new topPixel[height][width];
    
    // loop through height rows from top to bottom
    for (int row = 0; row < height; row++) 
      for (int col = 0; col < width; col++) 
-       pixelArray[row][col] = new Pixel(this,col,row);
+       pixelArray[row][col] = new topPixel(this,col,row);
     
    return pixelArray;
  }

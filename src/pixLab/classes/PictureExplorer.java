@@ -363,7 +363,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     colorInfoPanel.setLayout(new FlowLayout());
     
     // get the pixel at the x and y
-    Pixel pixel = new Pixel(picture,colIndex,rowIndex);
+    topPixel pixel = new topPixel(picture,colIndex,rowIndex);
     
     // create the labels
     rValue = new JLabel("R: " + pixel.getRed());
@@ -569,7 +569,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
       rowIndex = pictureY;
       
       // get the pixel at the x and y
-      Pixel pixel = new Pixel(picture,colIndex,rowIndex);
+      topPixel pixel = new topPixel(picture,colIndex,rowIndex);
       
       // set the values based on the pixel
       colValue.setText(Integer.toString(colIndex  + numberBase));
